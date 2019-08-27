@@ -1,13 +1,22 @@
-const cursor = document.querySelector('.cursor');
+const curseur = document.querySelector('.curseur');
 
 document.addEventListener('mousemove', e => {
-    cursor.setAttribute("style", "top: "+(e.pageY - 20)+"px; left: "+(e.pageX - 20)+"px;")
+
+    curseur.style.top = e.pageY - 20 + "px";
+    curseur.style.left = e.pageX - 20 + "px";
+    // console.log(e.pageY, e.pageX);
+
 })
 
 document.addEventListener('click', () => {
-    cursor.classList.add("expand");
+
+    curseur.classList.add('expand');
 
     setTimeout(() => {
-        cursor.classList.remove("expand");
+        curseur.classList.remove('expand');
     }, 500)
+
 })
+
+
+
