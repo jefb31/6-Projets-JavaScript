@@ -1,75 +1,66 @@
 body {
-    margin: 0;
+    margin : 0;
     height: 100vh;
     background: #1b1b1b;
     cursor: none;
-  }
-  
-  .cursor {
+    overflow: hidden;
+}
+
+.curseur {
     width: 40px;
-    height: 40px;
+    height:40px;
     border: 1px solid white;
     border-radius: 50%;
     position: absolute;
-    /* transition-duration: 200ms;
-    transition-timing-function: ease-out; */
-    animation: cursorAnim .5s infinite alternate;
-    pointer-events: none;
-  }
-  
-  .cursor::after {
+    animation: cursorAnim 0.5s infinite alternate;
+}
+
+.curseur::after {
     content: "";
     width: 40px;
     height: 40px;
     position: absolute;
     border: 8px solid gray;
     border-radius: 50%;
-    opacity: .5;
+    opacity: 0.5;
     top: -8px;
     left: -8px;
-    animation: cursorAnim2 .5s infinite alternate;
-  }
-  
-  @keyframes cursorAnim {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0.7);
-    }
-  }
-  @keyframes cursorAnim2 {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(0.4);
-    }
-  }
-  @keyframes cursorAnim3 {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(3);
-    }
-    100% {
-      transform: scale(1);
-      opacity: 0;
-    }
-  }
-  .expand {
-    animation: cursorAnim3 .5s forwards;
+    animation: cursorAnim2 0.5s infinite alternate;
+}
+
+.expand {
+    animation: cursorAnim3 0.5s forwards;
     border: 1px solid red;
-  }
-  
-  p {
-    color: white;
-    font-family: 'arial';
-    text-align: center;
-    margin-top: 50px;
-    font-size: 1.4em;
-  }
-  p a {
-    color: teal;
-  }
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.7);
+    }
+}
+
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(3);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
