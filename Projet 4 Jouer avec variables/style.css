@@ -1,30 +1,31 @@
 :root {
---base: #ffc600;
---spacing: 10px;
---blur: 10px;
+    --base: #ffc600;
+    --taille: 100px;
+    --blur: 10px;
 }
-
 
 img {
-padding: var(--spacing);
-filter: blur(var(--blur));
+    height: var(--taille);
+    filter: blur(var(--blur));
 }
 
-.hl {
-color: var(--base);
+.titre {
+    color: var(--base);
+    font-size: 80px;
 }
 
 body {
-text-align: center;
-background: #193549;
-color: white;
-font-family: 'helvetica neue', sans-serif;
-font-weight: 100;
-font-size: 50px;
+    text-align: center;
+    background: #193549;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 50px;
 }
+
 .controls {
-margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 input {
-width:100px;
+    width: 100px;
 }
