@@ -1,14 +1,21 @@
-// When the user scrolls the page, execute myFunction 
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-    // var winScroll = document.body.scrollTop || document.documentElement.scrollTop; ???
-  var winScroll =  document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
+window.addEventListener('scroll', remplir);
 
 
-  console.log(document.documentElement.scrollTop , document.body.scrollTop);
-  
+function remplir(){
+
+    // ce que l'on a scrollé.
+    var winScroll = document.documentElement.scrollTop;
+    // console.log(winScroll);
+
+    // hauteur totale - hauteur de la fenetre du client(visible)
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    // console.log(height);
+    
+    var scrolled = (winScroll / height) * 100;
+    console.log(scrolled);
+    
+
+    document.getElementById('myBar').style.width = scrolled + '%';
+
+    
 }
