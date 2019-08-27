@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>CSS Variables et JS</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jouer avec vars</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h2><span class='hl'>Changer les variables CSS avec Javascript</span></h2>
+    <h1 class="titre">Changer les variables CSS avec JavaScript</h1>
 
-<div class="controls">
-<label for="spacing">Espacement:</label>
-<input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+    <div class="controls">
+        <label for="taille">Taille : </label>
+        <input id="taille" type="range" name="taille" min="100" max="500" data-sizing="px">
 
-<label for="blur">Flou:</label>
-<input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+        <label for="blur">Flou :</label>
+        <input type="range" id="blur" name="blur" min="0" max="25" data-sizing="px">
 
-<label for="base">Couleur</label>
-<input id="base" type="color" name="base" value="#ffc600">
-</div>
+        <label for="base">Couleur</label>
+        <input type="color" id="base" name="base" value="#ffc600">
+    </div>
 
-<img src="https://images.pexels.com/photos/1436119/pexels-photo-1436119.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=400&w=400">
+    <img src="p1.jpeg">
 
-<script src="app.js">
-</script>
-
-
+    <script src="app.js"></script>
 </body>
 </html>
