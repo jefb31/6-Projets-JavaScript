@@ -1,56 +1,50 @@
-
 const base = document.querySelector('.base');
 const box = document.querySelectorAll('.case');
-
-
 
 base.addEventListener('dragstart', dragStart);
 base.addEventListener('dragend', dragEnd);
 
 
-function dragStart() {
+function dragStart(){
+    // console.log("start");
     this.className += ' tenu';
 
     setTimeout(() => (this.className = 'invisible'), 0);
 }
 
-function dragEnd() {
-    this.className = 'base';
+
+function dragEnd(){
+    // console.log("end");
+    this.className = 'base'
 }
 
-
-for (const vide of box) {
+for(const vide of box) {
 
     vide.addEventListener('dragover', dragOver);
-
     vide.addEventListener('dragenter', dragEnter);
-
     vide.addEventListener('dragleave', dragLeave);
-
     vide.addEventListener('drop', dragDrop);
 
-
 }
-
-
 
 function dragOver(e) {
-    e.preventDefault()
+    e.preventDefault();
 
-
+    // console.log('over');
 }
 
-function dragEnter(e) {
-    e.preventDefault();
+function dragEnter(){
+    // console.log("enter");
     this.className += ' hovered';
 }
 
-function dragLeave() {
+function dragLeave(){
+    // console.log("leave");
     this.className = 'case';
 }
 
-
-function dragDrop() {
+function dragDrop(){
+    // console.log('dropped');
     this.className = 'case';
     this.append(base);
 }
