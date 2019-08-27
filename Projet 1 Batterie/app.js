@@ -6,9 +6,9 @@ function playSound(e) {
 
     console.log(e);
     
-    const audio = document.querySelector(`audio[key="${e.key}"]`);
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     
-    const key = document.querySelector(`div[key="${e.key}"]`)
+    const key = document.querySelector(`div[data-key="${e.keyCode}"]`)
 
    if(!audio) return;
 
