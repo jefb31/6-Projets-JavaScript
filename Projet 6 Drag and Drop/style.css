@@ -6,19 +6,14 @@ body {
     height: 100vh;
 }
 
-
-.base {
-    background-image: url("https://source.unsplash.com/random/150x150");
+.base{
+    background-image: url('https://source.unsplash.com/random/150x150');
     position: relative;
     height: 150px;
     width: 150px;
     top: 5px;
     left: 5px;
     cursor: pointer;
-}
-
-.tenu {
-    border: solid 5px #ccc;
 }
 
 .case {
@@ -28,6 +23,9 @@ body {
     margin: 10px;
     border: solid 3px black;
     background: #fff;
+}
+.tenu {
+    border: solid 5px #ccc;
 }
 
 .hovered {
